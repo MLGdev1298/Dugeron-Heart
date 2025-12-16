@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://bneecimwnca4p"]
+
+[ext_resource type="Texture2D" uid="uid://da02e8vl0wv8o" path="res://src/assest/ControlsTouch Textures/keyboard_arrow_right.png" id="1_fxo4s"]
+[ext_resource type="Texture2D" uid="uid://bcab7y4n7d5a3" path="res://src/assest/ControlsTouch Textures/keyboard_arrow_right_outline.png" id="2_rxjcy"]
+[ext_resource type="Texture2D" uid="uid://dohdtsgim4kx2" path="res://src/assest/ControlsTouch Textures/keyboard_arrow_left.png" id="3_h28mg"]
+[ext_resource type="Texture2D" uid="uid://d04sh1apib5cn" path="res://src/assest/ControlsTouch Textures/keyboard_arrow_left_outline.png" id="4_6hsqx"]
+[ext_resource type="Texture2D" uid="uid://y8nmj80ybnuw" path="res://src/assest/ControlsTouch Textures/keyboard_arrow_up.png" id="5_1u8en"]
+[ext_resource type="Texture2D" uid="uid://btpgmd4n2mmyc" path="res://src/assest/ControlsTouch Textures/keyboard_arrow_up_outline.png" id="6_c4nac"]
+
+[node name="GUI_controls" type="CanvasLayer"]
+
+[node name="Izquierda" type="TouchScreenButton" parent="."]
+texture_filter = 2
+position = Vector2(81, 501)
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("3_h28mg")
+texture_pressed = ExtResource("4_6hsqx")
+passby_press = true
+action = "Izquierda"
+
+[node name="Derecha" type="TouchScreenButton" parent="."]
+texture_filter = 2
+position = Vector2(264, 503)
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("1_fxo4s")
+texture_pressed = ExtResource("2_rxjcy")
+passby_press = true
+action = "Derecha"
+
+[node name="Salto" type="TouchScreenButton" parent="."]
+texture_filter = 2
+position = Vector2(1305, 499)
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("5_1u8en")
+texture_pressed = ExtResource("6_c4nac")
+passby_press = true
+action = "Saltar"

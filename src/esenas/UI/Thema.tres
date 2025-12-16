@@ -1,0 +1,15 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://df8mrncfacjyk"]
+
+[ext_resource type="FontFile" uid="uid://clr6cbc2rndbr" path="res://src/assest/Font/Kenney Pixel.ttf" id="1_2a1ks"]
+[ext_resource type="Texture2D" uid="uid://dbribnjie8wkb" path="res://src/assest/Thema/chekBotom/reditmentuncek.png" id="1_3oc2x"]
+[ext_resource type="Texture2D" uid="uid://gvyfed03hvl7" path="res://src/assest/Thema/chekBotom/redimentcek.png" id="2_xffk5"]
+
+[resource]
+Button/colors/font_hover_color = Color(0.9490196, 1, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0.29803923, 0.69803923, 1, 1)
+Button/colors/font_pressed_color = Color(0.23347843, 0.2334784, 0.2334784, 1)
+Button/font_sizes/font_size = 35
+CheckButton/icons/checked = ExtResource("1_3oc2x")
+CheckButton/icons/unchecked = ExtResource("2_xffk5")
+Label/font_sizes/font_size = 40
+Label/fonts/font = ExtResource("1_2a1ks")
