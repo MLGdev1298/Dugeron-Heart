@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=3 uid="uid://ye86ey7ag7cc"]
+
+[ext_resource type="Script" uid="uid://cswm3a8nvimb2" path="res://src/script/créditos.gd" id="1_ksq0o"]
+[ext_resource type="Texture2D" uid="uid://bonu4w1ejbghm" path="res://src/assest/credits/Youtube.png" id="2_y7k23"]
+[ext_resource type="Texture2D" uid="uid://oc8njr870jlm" path="res://src/assest/credits/Discord.png" id="3_48b0c"]
+
+[node name="Creditos" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ksq0o")
+metadata/_edit_lock_ = true
+
+[node name="bg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.34375
+anchor_top = 0.81527776
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.14957431, 0.14957431, 0.14957431, 1)
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="buttonContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+anchor_left = 0.34296876
+anchor_top = 0.81527776
+anchor_right = 1.0
+anchor_bottom = 0.99722224
+alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Youtube" type="Button" parent="buttonContainer"]
+layout_mode = 2
+text = "@plusneo"
+icon = ExtResource("2_y7k23")
+flat = true
+
+[node name="Discord" type="Button" parent="buttonContainer"]
+layout_mode = 2
+text = "Plus Neo Comunity"
+icon = ExtResource("3_48b0c")
+flat = true
