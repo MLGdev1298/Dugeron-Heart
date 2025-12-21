@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ye86ey7ag7cc"]
+[gd_scene load_steps=5 format=3 uid="uid://ye86ey7ag7cc"]
 
 [ext_resource type="Script" uid="uid://cswm3a8nvimb2" path="res://src/script/créditos.gd" id="1_ksq0o"]
 [ext_resource type="Texture2D" uid="uid://bonu4w1ejbghm" path="res://src/assest/credits/Youtube.png" id="2_y7k23"]
 [ext_resource type="Texture2D" uid="uid://oc8njr870jlm" path="res://src/assest/credits/Discord.png" id="3_48b0c"]
+[ext_resource type="FontFile" uid="uid://bvtm7dm52lcye" path="res://src/assest/Font/Kenney Pixel Square.ttf" id="4_48b0c"]
 
 [node name="Creditos" type="Control"]
 layout_mode = 3
@@ -36,6 +37,57 @@ color = Color(0.14957431, 0.14957431, 0.14957431, 1)
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
 
+[node name="Crédit_text" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_right = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Text" type="VBoxContainer" parent="Crédit_text"]
+layout_mode = 2
+
+[node name="title" type="Label" parent="Crédit_text/Text"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_48b0c")
+text = "Créditos"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="Crédit_text/Text"]
+layout_mode = 2
+text = "creador"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Crédit_text/Text"]
+layout_mode = 2
+text = "-> MLGDev"
+
+[node name="Label3" type="Label" parent="Crédit_text/Text"]
+layout_mode = 2
+text = "Moderador/coder"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Crédit_text/Text"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "-> ✨🚬➻𒍜➻乃乇尺刀ﾑ尺りの 爪のり⌛➻𒍜➻"
+
+[node name="Label7" type="Label" parent="Crédit_text/Text"]
+layout_mode = 2
+text = "-> MLGDev"
+
+[node name="Label5" type="Label" parent="Crédit_text/Text"]
+layout_mode = 2
+text = "Tester "
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Crédit_text/Text"]
+layout_mode = 2
+text = "-> JM"
+
 [node name="buttonContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
 anchor_left = 0.34296876
@@ -44,6 +96,14 @@ anchor_right = 1.0
 anchor_bottom = 0.99722224
 alignment = 2
 metadata/_edit_use_anchors_ = true
+
+[node name="info" type="Label" parent="buttonContainer"]
+layout_mode = 2
+text = "Unete
+a
+Nuestras
+Redes Sociales -->"
+horizontal_alignment = 1
 
 [node name="Youtube" type="Button" parent="buttonContainer"]
 layout_mode = 2
@@ -56,3 +116,16 @@ layout_mode = 2
 text = "Plus Neo Comunity"
 icon = ExtResource("3_48b0c")
 flat = true
+
+[node name="Atras" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.09
+anchor_bottom = 0.26000002
+offset_left = 35.0
+offset_top = 561.0
+offset_right = 9.799995
+offset_bottom = 487.8
+text = "Atras"
+
+[connection signal="pressed" from="Atras" to="." method="_on_atras_pressed"]
