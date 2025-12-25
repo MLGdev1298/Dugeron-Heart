@@ -7,7 +7,7 @@ func _ready() -> void:
 
 
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://src/esenas/mundo.tscn")
+	pass
 
 
 func _on_start_2_pressed() -> void:
