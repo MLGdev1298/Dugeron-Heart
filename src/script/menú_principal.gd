@@ -9,7 +9,6 @@ func _ready() -> void:
 func _on_start_pressed() -> void:
 	pass
 
-
 func _on_start_2_pressed() -> void:
 	OS.alert("Varios ajustes para la versión 0.0.2.alfa disponible espere una actualización", "Mensaje de Alerta")
 

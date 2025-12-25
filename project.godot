@@ -14,7 +14,7 @@ config/name="Dugeron Heart"
 config/description="Proyecto en progreso"
 config/version="0.0.1"
 config/tags=PackedStringArray("enprogreso")
-run/main_scene="uid://b6ickvxe03ux8"
+run/main_scene="uid://bxdmx3r5s1s1l"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="uid://dy3d7h4qgndsc"
@@ -23,6 +23,7 @@ run/icon="res://icon.svg"
 [autoload]
 
 PlusStore="res://src/script/globals/PlusStore.gd"
+Global="*res://src/script/globals/Global.gd"
 
 [display]
 
@@ -60,6 +61,5 @@ locale/locale_filter_mode=0
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"
+renderer/rendering_method="mobile"
 textures/vram_compression/import_s3tc_bptc=true

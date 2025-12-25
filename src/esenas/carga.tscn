@@ -1,6 +1,43 @@
-[gd_scene load_steps=2 format=3 uid="uid://b6ickvxe03ux8"]
+[gd_scene load_steps=5 format=3 uid="uid://b6ickvxe03ux8"]
 
 [ext_resource type="Script" uid="uid://b3dcugt6hb5g4" path="res://src/script/carga.gd" id="1_vonxy"]
+
+[sub_resource type="Animation" id="Animation_vonxy"]
+resource_name = "loading"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.31, 0.56, 0.75, 0.89),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Cargando...", "Cargando", "Cargando.", "Cargando..", "Cargando..."]
+}
+
+[sub_resource type="Animation" id="Animation_pdnth"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Cargando..."]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h3a0r"]
+_data = {
+&"RESET": SubResource("Animation_pdnth"),
+&"loading": SubResource("Animation_vonxy")
+}
 
 [node name="Carga" type="Control"]
 layout_mode = 3
@@ -11,7 +48,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vonxy")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Bg" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -20,19 +57,41 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
-anchors_preset = 14
+anchors_preset = 8
+anchor_left = 0.5
 anchor_top = 0.5
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 0.5
+offset_left = -428.0
+offset_top = -17.0
+offset_right = 428.0
+offset_bottom = 17.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="VBoxContainer"]
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer"]
+unique_name_in_owner = true
 layout_mode = 2
-text = "Cargando Archivos ..."
-horizontal_alignment = 1
+theme_override_font_sizes/font_size = 60
 
-[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer"]
-layout_mode = 2
+[node name="loading" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.834375
+anchor_top = 0.9138889
+anchor_right = 0.9398438
+anchor_bottom = 0.95555556
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 60
+text = "Cargando..."
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="loading"]
+libraries = {
+&"": SubResource("AnimationLibrary_h3a0r")
+}
+
+[connection signal="value_changed" from="MarginContainer/ProgressBar" to="." method="_on_progress_bar_value_changed"]
