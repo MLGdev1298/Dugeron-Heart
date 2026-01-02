@@ -50,15 +50,15 @@ theme_override_fonts/font = ExtResource("1_6kl2p")
 theme_override_font_sizes/font_size = 45
 text = "Opciones"
 
+[node name="credits" type="Button" parent="Btn/VBoxContainer"]
+layout_mode = 2
+text = "Créditos"
+
 [node name="exit" type="Button" parent="Btn/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_6kl2p")
 theme_override_font_sizes/font_size = 45
 text = "Salir"
-
-[node name="credits" type="Button" parent="Btn/VBoxContainer"]
-layout_mode = 2
-text = "Créditos"
 
 [node name="Titulo" type="Label" parent="."]
 layout_mode = 1
@@ -76,5 +76,5 @@ metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Btn/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Btn/VBoxContainer/option" to="." method="_on_start_2_pressed"]
-[connection signal="pressed" from="Btn/VBoxContainer/exit" to="." method="_on_start_3_pressed"]
 [connection signal="pressed" from="Btn/VBoxContainer/credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Btn/VBoxContainer/exit" to="." method="_on_start_3_pressed"]

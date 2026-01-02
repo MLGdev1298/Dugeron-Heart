@@ -16,8 +16,11 @@ config/version="0.0.1"
 config/tags=PackedStringArray("enprogreso")
 run/main_scene="uid://bxdmx3r5s1s1l"
 config/features=PackedStringArray("4.5", "GL Compatibility")
-boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/bg_color=Color(0, 0.8901961, 1, 1)
 config/icon="uid://dy3d7h4qgndsc"
+boot_splash/fullsize=false
+boot_splash/image="uid://cvpeqqykhjvii"
+boot_splash/minimum_display_time=3500
 run/icon="res://icon.svg"
 
 [autoload]
@@ -30,6 +33,7 @@ Global="*res://src/script/globals/Global.gd"
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/size/mode=3
+mouse_cursor/custom_image="uid://xgsqeeikfcim"
 
 [gui]
 
