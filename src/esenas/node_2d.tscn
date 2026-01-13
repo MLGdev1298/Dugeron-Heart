@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dhncb0sq0gx7p"]
-
-[ext_resource type="PackedScene" uid="uid://0aigmvk8rho4" path="res://src/esenas/player.tscn" id="1_c3gds"]
-
-[node name="Node2D" type="Node2D"]
-
-[node name="player" parent="." instance=ExtResource("1_c3gds")]
-position = Vector2(175, 251)
