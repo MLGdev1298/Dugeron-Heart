@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvpeqqykhjvii"
-path="res://.godot/imported/Plustedstudios.logo.png-a840d68180b314289e394574be8aad67.ctex"
+uid="uid://codkbv0vni7fb"
+path="res://.godot/imported/PlusNeoStudios_logo.png-3b00156b5b8c6e67a4894bc9d3420236.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/assest/Empresa/Plustedstudios.logo.png"
-dest_files=["res://.godot/imported/Plustedstudios.logo.png-a840d68180b314289e394574be8aad67.ctex"]
+source_file="res://src/assest/Empresa/PlusNeoStudios_logo.png"
+dest_files=["res://.godot/imported/PlusNeoStudios_logo.png-3b00156b5b8c6e67a4894bc9d3420236.ctex"]
 
 [params]
 

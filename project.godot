@@ -16,11 +16,12 @@ config/version="0.0.1"
 config/tags=PackedStringArray("enprogreso")
 run/main_scene="uid://bxdmx3r5s1s1l"
 config/features=PackedStringArray("4.5", "GL Compatibility")
-boot_splash/bg_color=Color(0, 0.8901961, 1, 1)
+boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="uid://dy3d7h4qgndsc"
 boot_splash/fullsize=false
-boot_splash/image="uid://cvpeqqykhjvii"
-boot_splash/minimum_display_time=3500
+boot_splash/use_filter=false
+boot_splash/image="uid://codkbv0vni7fb"
+boot_splash/minimum_display_time=300
 run/icon="res://icon.svg"
 
 [autoload]
