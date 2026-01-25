@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bonu4w1ejbghm" path="res://src/assest/credits/Youtube.png" id="2_y7k23"]
 [ext_resource type="Texture2D" uid="uid://oc8njr870jlm" path="res://src/assest/credits/Discord.png" id="3_48b0c"]
 [ext_resource type="FontFile" uid="uid://bvtm7dm52lcye" path="res://src/assest/Font/Kenney Pixel Square.ttf" id="4_48b0c"]
-[ext_resource type="Texture2D" uid="uid://codkbv0vni7fb" path="res://src/assest/Empresa/PlusNeoStudios_logo.png" id="5_xclii"]
+[ext_resource type="Texture2D" uid="uid://codkbv0vni7fb" path="res://src/assest/Logo/PlusNeoStudios_logo.png" id="5_xclii"]
 
 [node name="Creditos" type="Control"]
 layout_mode = 3

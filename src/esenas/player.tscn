@@ -1,6 +1,6 @@
 [gd_scene load_steps=31 format=3 uid="uid://0aigmvk8rho4"]
 
-[ext_resource type="Script" uid="uid://c6wv015n83ly5" path="res://src/esenas/player.gd" id="1_iu083"]
+[ext_resource type="Script" uid="uid://c6wv015n83ly5" path="res://src/script/player.gd" id="1_iu083"]
 [ext_resource type="Texture2D" uid="uid://duqmio25x6sgx" path="res://src/assest/character/16x16 Idle-Sheet.png" id="2_furjp"]
 [ext_resource type="Texture2D" uid="uid://b51dnpp2ouix7" path="res://src/assest/character/16x16 Walk Cycle-Sheet.png" id="3_5tnhl"]
 [ext_resource type="PackedScene" uid="uid://bneecimwnca4p" path="res://src/esenas/UI/gui_controls.tscn" id="4_5tnhl"]
@@ -212,13 +212,13 @@ radius = 22.0
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_iu083")
 
+[node name="GUI_controls" parent="." instance=ExtResource("4_5tnhl")]
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_lddbu")
-animation = &"ilde_down"
+animation = &"walk_left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 6)
 shape = SubResource("CircleShape2D_srfgp")
-
-[node name="GUI_controls" parent="." instance=ExtResource("4_5tnhl")]

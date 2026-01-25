@@ -13,8 +13,7 @@
 
 [node name="Left" type="TouchScreenButton" parent="."]
 texture_filter = 2
-position = Vector2(58, 345)
-scale = Vector2(1.5, 1.5)
+position = Vector2(23, 407)
 texture_normal = ExtResource("3_h28mg")
 texture_pressed = ExtResource("4_6hsqx")
 passby_press = true
@@ -22,8 +21,7 @@ action = "Izquierda"
 
 [node name="Rigth" type="TouchScreenButton" parent="."]
 texture_filter = 2
-position = Vector2(353, 343)
-scale = Vector2(1.5, 1.5)
+position = Vector2(203, 404)
 texture_normal = ExtResource("1_fxo4s")
 texture_pressed = ExtResource("2_rxjcy")
 passby_press = true
@@ -31,8 +29,7 @@ action = "Derecha"
 
 [node name="Up" type="TouchScreenButton" parent="."]
 texture_filter = 2
-position = Vector2(204.00002, 195.00002)
-scale = Vector2(1.5, 1.5)
+position = Vector2(112, 317)
 texture_normal = ExtResource("5_1u8en")
 texture_pressed = ExtResource("6_c4nac")
 passby_press = true
@@ -40,8 +37,7 @@ action = "Arriba"
 
 [node name="Down" type="TouchScreenButton" parent="."]
 texture_filter = 2
-position = Vector2(206, 491)
-scale = Vector2(1.5, 1.5)
+position = Vector2(115, 495)
 texture_normal = ExtResource("7_h28mg")
 texture_pressed = ExtResource("8_6hsqx")
 passby_press = true

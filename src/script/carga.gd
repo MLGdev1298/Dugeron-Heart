@@ -19,3 +19,4 @@ func _process(delta: float) -> void:
 	
 	$loading/AnimationPlayer.play("loading")
 	%ProgressBar.value = progress[0] * 100
+	

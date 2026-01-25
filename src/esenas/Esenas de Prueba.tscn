@@ -1,8 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://dhncb0sq0gx7p"]
+[gd_scene load_steps=3 format=3 uid="uid://dhncb0sq0gx7p"]
 
 [ext_resource type="PackedScene" uid="uid://0aigmvk8rho4" path="res://src/esenas/player.tscn" id="1_u00mv"]
+[ext_resource type="Texture2D" uid="uid://codkbv0vni7fb" path="res://src/assest/Logo/PlusNeoStudios_logo.png" id="2_3hbin"]
 
 [node name="Node2D" type="Node2D"]
 
+[node name="PlusNeoStudiosLogo" type="Sprite2D" parent="."]
+position = Vector2(316, 257)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_3hbin")
+
+[node name="Label" type="Label" parent="PlusNeoStudiosLogo"]
+offset_left = -106.0
+offset_top = 260.0
+offset_right = 141.0
+offset_bottom = 295.0
+text = "Esenas de prueba"
+
 [node name="player" parent="." instance=ExtResource("1_u00mv")]
 position = Vector2(175, 251)
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+zoom = Vector2(1.5, 1.5)

@@ -26,20 +26,12 @@ run/icon="res://icon.svg"
 
 [autoload]
 
-PlusStore="res://src/script/globals/PlusStore.gd"
 Global="*res://src/script/globals/Global.gd"
-DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [display]
 
-window/size/viewport_width=1280
-window/size/viewport_height=720
 window/size/mode=3
 mouse_cursor/custom_image="uid://xgsqeeikfcim"
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [gui]
 
