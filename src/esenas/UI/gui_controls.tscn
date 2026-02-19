@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://bneecimwnca4p"]
+[gd_scene format=3 uid="uid://bneecimwnca4p"]
 
+[ext_resource type="Script" uid="uid://cq7grfoxsrfeo" path="res://src/script/Config/gui_controls.gd" id="1_6hsqx"]
 [ext_resource type="Texture2D" uid="uid://da02e8vl0wv8o" path="res://src/assest/ControlsTouch Textures/keyboard_arrow_right.png" id="1_fxo4s"]
 [ext_resource type="Texture2D" uid="uid://bcab7y4n7d5a3" path="res://src/assest/ControlsTouch Textures/keyboard_arrow_right_outline.png" id="2_rxjcy"]
 [ext_resource type="Texture2D" uid="uid://dohdtsgim4kx2" path="res://src/assest/ControlsTouch Textures/keyboard_arrow_left.png" id="3_h28mg"]
@@ -9,9 +10,10 @@
 [ext_resource type="Texture2D" uid="uid://xkw5ht2mckf2" path="res://src/assest/ControlsTouch Textures/keyboard_arrow_down.png" id="7_h28mg"]
 [ext_resource type="Texture2D" uid="uid://b4etglij72onw" path="res://src/assest/ControlsTouch Textures/keyboard_arrow_down_outline.png" id="8_6hsqx"]
 
-[node name="GUI_controls" type="CanvasLayer"]
+[node name="GUI_controls" type="CanvasLayer" unique_id=140622398]
+script = ExtResource("1_6hsqx")
 
-[node name="Left" type="TouchScreenButton" parent="."]
+[node name="Left" type="TouchScreenButton" parent="." unique_id=226969113]
 texture_filter = 2
 position = Vector2(23, 407)
 texture_normal = ExtResource("3_h28mg")
@@ -19,7 +21,7 @@ texture_pressed = ExtResource("4_6hsqx")
 passby_press = true
 action = "Izquierda"
 
-[node name="Rigth" type="TouchScreenButton" parent="."]
+[node name="Rigth" type="TouchScreenButton" parent="." unique_id=95120392]
 texture_filter = 2
 position = Vector2(203, 404)
 texture_normal = ExtResource("1_fxo4s")
@@ -27,7 +29,7 @@ texture_pressed = ExtResource("2_rxjcy")
 passby_press = true
 action = "Derecha"
 
-[node name="Up" type="TouchScreenButton" parent="."]
+[node name="Up" type="TouchScreenButton" parent="." unique_id=1097665795]
 texture_filter = 2
 position = Vector2(112, 317)
 texture_normal = ExtResource("5_1u8en")
@@ -35,10 +37,60 @@ texture_pressed = ExtResource("6_c4nac")
 passby_press = true
 action = "Arriba"
 
-[node name="Down" type="TouchScreenButton" parent="."]
+[node name="Down" type="TouchScreenButton" parent="." unique_id=818403407]
 texture_filter = 2
 position = Vector2(115, 495)
 texture_normal = ExtResource("7_h28mg")
 texture_pressed = ExtResource("8_6hsqx")
 passby_press = true
 action = "Abajo"
+
+[node name="pause" type="Button" parent="." unique_id=632071999]
+anchors_preset = -1
+anchor_left = 0.8958333
+anchor_top = 0.038580246
+anchor_right = 0.9756944
+anchor_bottom = 0.10493827
+grow_horizontal = 0
+text = "Pause"
+metadata/_edit_use_anchors_ = true
+
+[node name="menu paused" type="Control" parent="." unique_id=729580723]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="menu paused" unique_id=421733153]
+layout_mode = 1
+offset_left = -73.0
+offset_top = -68.5
+offset_right = 73.0
+offset_bottom = 68.5
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="continue" type="Button" parent="menu paused/VBoxContainer" unique_id=205769191]
+layout_mode = 2
+text = "Continuar"
+
+[node name="options" type="Button" parent="menu paused/VBoxContainer" unique_id=48909752]
+layout_mode = 2
+text = "Opciones"
+
+[node name="exit" type="Button" parent="menu paused/VBoxContainer" unique_id=1835105900]
+layout_mode = 2
+text = "Salir"
+
+[connection signal="pressed" from="pause" to="." method="_on_pause_pressed"]
+[connection signal="pressed" from="menu paused/VBoxContainer/continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="menu paused/VBoxContainer/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="menu paused/VBoxContainer/exit" to="." method="_on_exit_pressed"]

@@ -8,6 +8,7 @@ var current_dir = "none"
 func _ready() -> void:
 	anims.play("ilde_down")
 
+
 func _physics_process(delta: float) -> void:
 	player_moves(delta)
 

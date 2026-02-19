@@ -1,12 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://ye86ey7ag7cc"]
+[gd_scene format=3 uid="uid://ye86ey7ag7cc"]
 
 [ext_resource type="Script" uid="uid://cswm3a8nvimb2" path="res://src/script/créditos.gd" id="1_ksq0o"]
 [ext_resource type="Texture2D" uid="uid://bonu4w1ejbghm" path="res://src/assest/credits/Youtube.png" id="2_y7k23"]
 [ext_resource type="Texture2D" uid="uid://oc8njr870jlm" path="res://src/assest/credits/Discord.png" id="3_48b0c"]
+[ext_resource type="FontFile" uid="uid://jkgrqipcgypp" path="res://src/assest/Font/Kenney Mini.ttf" id="3_ipwj3"]
 [ext_resource type="FontFile" uid="uid://bvtm7dm52lcye" path="res://src/assest/Font/Kenney Pixel Square.ttf" id="4_48b0c"]
 [ext_resource type="Texture2D" uid="uid://codkbv0vni7fb" path="res://src/assest/Logo/PlusNeoStudios_logo.png" id="5_xclii"]
 
-[node name="Creditos" type="Control"]
+[node name="Creditos" type="Control" unique_id=1952656633]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -16,7 +17,7 @@ grow_vertical = 2
 script = ExtResource("1_ksq0o")
 metadata/_edit_lock_ = true
 
-[node name="bg" type="TextureRect" parent="."]
+[node name="bg" type="TextureRect" parent="." unique_id=937157553]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -25,10 +26,10 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_lock_ = true
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1594480068]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.15
+anchor_left = 0.10069445
 anchor_top = 0.74444443
 anchor_right = 1.0
 anchor_bottom = 0.9986111
@@ -37,68 +38,67 @@ grow_vertical = 0
 color = Color(0.14957431, 0.14957431, 0.14957431, 1)
 metadata/_edit_use_anchors_ = true
 
-[node name="Crédit_text" type="MarginContainer" parent="."]
+[node name="Crédit_text" type="MarginContainer" parent="." unique_id=1331778089]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 32.0
-offset_right = -24.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Text" type="VBoxContainer" parent="Crédit_text"]
+[node name="Text" type="VBoxContainer" parent="Crédit_text" unique_id=366108312]
 layout_mode = 2
 
-[node name="title" type="Label" parent="Crédit_text/Text"]
+[node name="title" type="Label" parent="Crédit_text/Text" unique_id=1319930182]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_48b0c")
 text = "Créditos"
 horizontal_alignment = 1
 
-[node name="Label" type="Label" parent="Crédit_text/Text"]
+[node name="Label" type="Label" parent="Crédit_text/Text" unique_id=261485622]
 layout_mode = 2
 text = "creador"
 horizontal_alignment = 1
 
-[node name="Label2" type="Label" parent="Crédit_text/Text"]
+[node name="Label2" type="Label" parent="Crédit_text/Text" unique_id=905614185]
 layout_mode = 2
 text = "-> MLGDev"
 
-[node name="Label3" type="Label" parent="Crédit_text/Text"]
+[node name="Label3" type="Label" parent="Crédit_text/Text" unique_id=1413286247]
 layout_mode = 2
 text = "Moderador/coder"
 horizontal_alignment = 1
 
-[node name="Label4" type="Label" parent="Crédit_text/Text"]
+[node name="Label4" type="Label" parent="Crédit_text/Text" unique_id=774055163]
 layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "-> ✨🚬➻𒍜➻乃乇尺刀ﾑ尺りの 爪のり⌛➻𒍜➻"
+theme_override_fonts/font = ExtResource("3_ipwj3")
+theme_override_font_sizes/font_size = 30
+text = "-> BGLdev:MPD"
 
-[node name="Label7" type="Label" parent="Crédit_text/Text"]
+[node name="Label7" type="Label" parent="Crédit_text/Text" unique_id=728134196]
 layout_mode = 2
 text = "-> MLGDev"
 
-[node name="Label5" type="Label" parent="Crédit_text/Text"]
+[node name="Label5" type="Label" parent="Crédit_text/Text" unique_id=972035038]
 layout_mode = 2
 text = "Tester "
 horizontal_alignment = 1
 
-[node name="Label6" type="Label" parent="Crédit_text/Text"]
+[node name="Label6" type="Label" parent="Crédit_text/Text" unique_id=362625297]
 layout_mode = 2
 text = "-> JM"
 
-[node name="buttonContainer" type="HBoxContainer" parent="."]
+[node name="buttonContainer" type="HBoxContainer" parent="." unique_id=1540049898]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.159375
+anchor_left = 0.10243055
 anchor_top = 0.7430556
-anchor_right = 0.9515625
+anchor_right = 0.9956597
 anchor_bottom = 0.99722224
 alignment = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="info" type="Label" parent="buttonContainer"]
+[node name="info" type="Label" parent="buttonContainer" unique_id=1770042075]
 layout_mode = 2
 text = "Unete
 a
@@ -106,30 +106,30 @@ Nuestras
 Redes Sociales -->"
 horizontal_alignment = 1
 
-[node name="Youtube" type="Button" parent="buttonContainer"]
+[node name="Youtube" type="Button" parent="buttonContainer" unique_id=2097745485]
 layout_mode = 2
 text = "@plusneostudios"
 icon = ExtResource("2_y7k23")
 flat = true
 
-[node name="Discord" type="Button" parent="buttonContainer"]
+[node name="Discord" type="Button" parent="buttonContainer" unique_id=1646962335]
 layout_mode = 2
 text = "Plus Neo Comunity"
 icon = ExtResource("3_48b0c")
 flat = true
 
-[node name="Atras" type="Button" parent="."]
+[node name="Atras" type="Button" parent="." unique_id=444923042]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.09
 anchor_bottom = 0.26000002
-offset_left = 35.0
-offset_top = 567.0
-offset_right = 9.799995
-offset_bottom = 487.8
+offset_left = 19.0
+offset_top = 532.0
+offset_right = 5.319992
+offset_bottom = 464.52
 text = "Atras"
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=551412277]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
