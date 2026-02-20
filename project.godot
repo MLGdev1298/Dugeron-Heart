@@ -21,10 +21,10 @@ config/tags=PackedStringArray("enprogreso")
 run/main_scene="uid://bxdmx3r5s1s1l"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
+config/icon="uid://dy3d7h4qgndsc"
 boot_splash/stretch_mode=0
 boot_splash/use_filter=false
 boot_splash/image="uid://codkbv0vni7fb"
-config/icon="uid://dy3d7h4qgndsc"
 boot_splash/minimum_display_time=300
 run/icon="res://icon.svg"
 
